@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "cdk": "cdk",
-    "deploy": "cdk bootstrap && yarn cdk deploy --require-approval never --outputs-file cdk.out.json",
+    "bootstrap": "cdk bootstrap",
+    "deploy": "yarn cdk deploy --require-approval never --outputs-file cdk.out.json",
     "destroy": "cdk destroy --force",
     "synth": "cdk synth"
   },
