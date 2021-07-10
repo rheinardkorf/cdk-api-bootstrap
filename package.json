@@ -1,0 +1,8 @@
+{
+  "name": "cdk-api-bootstrap",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

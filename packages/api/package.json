@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "cdk": "cdk",
+    "deploy": "yarn generate && cdk bootstrap && cdk deploy --require-approval never --outputs-file cdk.out.json",
+    "destroy": "cdk destroy --force",
+    "synth": "cdk synth",
+    "generate": "node -r esm generate.js",
+    "docs": "node -r esm ./api-docs/spec-update.js && serve ./api-docs -p 2000"
+  },
+  "dependencies": {
+    "@aws-cdk/core": "^1.111.0",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "^10.0.2",
+    "@aws-cdk/assert": "^1.111.0",
+    "@aws-cdk/aws-apigateway": "^1.111.0",
+    "@aws-cdk/aws-dynamodb": "^1.111.0",
+    "@aws-cdk/aws-lambda": "^1.111.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.0.1",
+    "@types/yamljs": "^0.2.31",
+    "aws-cdk": "^1.111.0",
+    "esm": "^3.2.25",
+    "jest": "^27.0.6",
+    "mkdirp": "^1.0.4",
+    "serve": "^12.0.0",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5",
+    "yamljs": "^0.3.0"
+  }
+}

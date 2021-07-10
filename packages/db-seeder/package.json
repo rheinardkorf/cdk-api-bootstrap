@@ -1,0 +1,29 @@
+{
+  "name": "db-seeder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "cdk": "cdk",
+    "deploy": "cdk bootstrap && yarn cdk deploy --require-approval never --outputs-file cdk.out.json",
+    "destroy": "cdk destroy --force",
+    "synth": "cdk synth"
+  },
+  "dependencies": {
+    "@aws-cdk/core": "^1.111.0",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-dynamodb": "^1.111.0",
+    "@aws-cdk/aws-iam": "^1.111.0",
+    "@aws-cdk/aws-lambda": "^1.111.0",
+    "@aws-cdk/aws-logs": "^1.111.0",
+    "@aws-cdk/custom-resources": "^1.111.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.0.1",
+    "aws-cdk": "^1.111.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  }
+}

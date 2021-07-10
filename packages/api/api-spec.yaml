@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: My API
+  description: |
+    This document describes My API.
+  version: 0.0.1
+servers:
+- url: "{resource}"
+  description: "AWS API Gateway"
+  variables:
+    resource:
+      default: YOUR_API_URL_HERE
+      description: This value is provided when you deploy your API.
+paths:
+  /example:
+    get:
+      operationId: exampleCollection
+      security: 
+        - api_auth:
+          - '*'
+      responses:
+        "200":
+          description: An example endpoint for a collection.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                    example:
+                      type: string
+                      enum: ["value1", "value2", "value3"]
+                      description: |
+                        Example string with enum values.
+        default:
+          description: Example Collection.
+components:          
+  securitySchemes:
+    api_auth:
+      type: apiKey
+      name: authorization
+      in: header
