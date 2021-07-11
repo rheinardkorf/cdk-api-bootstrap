@@ -20,10 +20,16 @@ parser.validate('api-spec.yaml').then((api)=>{
             if ( pathMethod.operationId ) {
     
                 const template = `'use strict'
-    
+const { corsHeaders } = require('/opt/nodejs/cors-headers.js');
+
+const stage = process.env.STAGE || 'dev'
+                    
 module.exports.${pathMethod.operationId} = (event, context, callback) => {
     const response = {
         statusCode:200,
+        headers: {
+            ...corsHeaders(stage),
+        },
         body: 'Hello!'
     }
 
