@@ -5,12 +5,13 @@ import fs from 'fs'
 const wsConfig = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../workspace.config.json')).toString());
 const stage = process.env.STAGE || 'dev';
 const stackId = `${wsConfig.stackPrefix}API-${stage}`;
+const searchKey = stackId.replace('-','');
 const spec = yaml.load(path.resolve(__dirname, '../api-spec.yaml'));
 if ( fs.existsSync(path.resolve(__dirname, '../cdk.out.json'))) {
     const cdkOutput = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../cdk.out.json')))
     const normalized = {}
     Object.keys(cdkOutput[stackId]).forEach(key => {
-        if ( key.startsWith('APIEndpoint') || key.startsWith(`${wsConfig.stackPrefix}APIEndpoint`) ) {
+        if ( key.startsWith('APIEndpoint') || key.startsWith(`${searchKey}APIEndpoint`) ) {
             normalized['APIEndpoint'] = cdkOutput[stackId][key]
         }
     })
