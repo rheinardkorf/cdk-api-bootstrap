@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`stack validation 1`] = `
+Object {
+  "Resources": Object {
+    "MyProjectDBdevDynamoDBFC24880B": Object {
+      "DeletionPolicy": "Delete",
+      "Properties": Object {
+        "AttributeDefinitions": Array [
+          Object {
+            "AttributeName": "PK",
+            "AttributeType": "S",
+          },
+          Object {
+            "AttributeName": "SK",
+            "AttributeType": "S",
+          },
+          Object {
+            "AttributeName": "PK1",
+            "AttributeType": "S",
+          },
+          Object {
+            "AttributeName": "SK1",
+            "AttributeType": "S",
+          },
+          Object {
+            "AttributeName": "PK2",
+            "AttributeType": "S",
+          },
+          Object {
+            "AttributeName": "SK2",
+            "AttributeType": "S",
+          },
+          Object {
+            "AttributeName": "PK3",
+            "AttributeType": "S",
+          },
+          Object {
+            "AttributeName": "SK3",
+            "AttributeType": "S",
+          },
+        ],
+        "BillingMode": "PAY_PER_REQUEST",
+        "GlobalSecondaryIndexes": Array [
+          Object {
+            "IndexName": "GSI1",
+            "KeySchema": Array [
+              Object {
+                "AttributeName": "PK1",
+                "KeyType": "HASH",
+              },
+              Object {
+                "AttributeName": "SK1",
+                "KeyType": "RANGE",
+              },
+            ],
+            "Projection": Object {
+              "ProjectionType": "ALL",
+            },
+          },
+          Object {
+            "IndexName": "GSI2",
+            "KeySchema": Array [
+              Object {
+                "AttributeName": "PK2",
+                "KeyType": "HASH",
+              },
+              Object {
+                "AttributeName": "SK2",
+                "KeyType": "RANGE",
+              },
+            ],
+            "Projection": Object {
+              "ProjectionType": "ALL",
+            },
+          },
+          Object {
+            "IndexName": "GSI3",
+            "KeySchema": Array [
+              Object {
+                "AttributeName": "PK3",
+                "KeyType": "HASH",
+              },
+              Object {
+                "AttributeName": "SK3",
+                "KeyType": "RANGE",
+              },
+            ],
+            "Projection": Object {
+              "ProjectionType": "ALL",
+            },
+          },
+        ],
+        "KeySchema": Array [
+          Object {
+            "AttributeName": "PK",
+            "KeyType": "HASH",
+          },
+          Object {
+            "AttributeName": "SK",
+            "KeyType": "RANGE",
+          },
+        ],
+        "PointInTimeRecoverySpecification": Object {
+          "PointInTimeRecoveryEnabled": true,
+        },
+        "StreamSpecification": Object {
+          "StreamViewType": "NEW_AND_OLD_IMAGES",
+        },
+        "TableName": "data-dev",
+      },
+      "Type": "AWS::DynamoDB::Table",
+      "UpdateReplacePolicy": "Delete",
+    },
+  },
+}
+`;

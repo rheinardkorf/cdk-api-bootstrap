@@ -7,13 +7,15 @@
     "bootstrap": "cdk bootstrap",
     "deploy": "yarn cdk deploy --require-approval never --outputs-file cdk.out.json",
     "destroy": "cdk destroy --force",
-    "synth": "cdk synth"
+    "synth": "cdk synth",
+    "test": "jest"
   },
   "dependencies": {
     "@aws-cdk/core": "^1.111.0",
     "source-map-support": "^0.5.19"
   },
   "devDependencies": {
+    "@aws-cdk/assert": "^1.111.0",
     "@aws-cdk/aws-dynamodb": "^1.111.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.3.1",

@@ -1,0 +1,544 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`stack validation 1`] = `
+Object {
+  "Parameters": Object {
+    "AssetParameters190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48cArtifactHash0CC9DBB5": Object {
+      "Description": "Artifact hash for asset \\"190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48c\\"",
+      "Type": "String",
+    },
+    "AssetParameters190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48cS3BucketB9C082A8": Object {
+      "Description": "S3 bucket for asset \\"190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48c\\"",
+      "Type": "String",
+    },
+    "AssetParameters190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48cS3VersionKey2E07B5C3": Object {
+      "Description": "S3 key for asset version \\"190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48c\\"",
+      "Type": "String",
+    },
+    "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24ArtifactHashBA91B77F": Object {
+      "Description": "Artifact hash for asset \\"67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24\\"",
+      "Type": "String",
+    },
+    "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3Bucket4D46ABB5": Object {
+      "Description": "S3 bucket for asset \\"67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24\\"",
+      "Type": "String",
+    },
+    "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3VersionKeyB0F28861": Object {
+      "Description": "S3 key for asset version \\"67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24\\"",
+      "Type": "String",
+    },
+    "AssetParametersc691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49cArtifactHash627DAAA7": Object {
+      "Description": "Artifact hash for asset \\"c691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49c\\"",
+      "Type": "String",
+    },
+    "AssetParametersc691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49cS3BucketEAC9DD43": Object {
+      "Description": "S3 bucket for asset \\"c691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49c\\"",
+      "Type": "String",
+    },
+    "AssetParametersc691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49cS3VersionKeyDD9AE9E7": Object {
+      "Description": "S3 key for asset version \\"c691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49c\\"",
+      "Type": "String",
+    },
+    "AssetParametersded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eafArtifactHash20BCD136": Object {
+      "Description": "Artifact hash for asset \\"ded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eaf\\"",
+      "Type": "String",
+    },
+    "AssetParametersded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eafS3BucketC598B87E": Object {
+      "Description": "S3 bucket for asset \\"ded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eaf\\"",
+      "Type": "String",
+    },
+    "AssetParametersded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eafS3VersionKey7A068F6F": Object {
+      "Description": "S3 key for asset version \\"ded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eaf\\"",
+      "Type": "String",
+    },
+  },
+  "Resources": Object {
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A": Object {
+      "DependsOn": Array [
+        "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+        "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3Bucket4D46ABB5",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3VersionKeyB0F28861",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3VersionKeyB0F28861",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Handler": "index.handler",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs14.x",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "logs:PutRetentionPolicy",
+                "logs:DeleteRetentionPolicy",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+        "Roles": Array [
+          Object {
+            "Ref": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "MyProjectDBSeederdevSeedLayer106D9E25": Object {
+      "Properties": Object {
+        "Content": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParametersded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eafS3BucketC598B87E",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParametersded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eafS3VersionKey7A068F6F",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParametersded02fc38ccee7624ccf76c813fd53a5ca0ea644dc4b39b48e598ec2fb581eafS3VersionKey7A068F6F",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+      },
+      "Type": "AWS::Lambda::LayerVersion",
+    },
+    "MyProjectDBSeederdevdatadevseedHandler01709C6C": Object {
+      "DependsOn": Array [
+        "MyProjectDBSeederdevseederResourceRoleDefaultPolicy7B61D9F1",
+        "MyProjectDBSeederdevseederResourceRoleC51146EC",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameters190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48cS3BucketB9C082A8",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48cS3VersionKey2E07B5C3",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48cS3VersionKey2E07B5C3",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "SEED_STAGE": "dev",
+            "TABLE_NAME": "data-dev",
+          },
+        },
+        "Handler": "seeder.handler",
+        "Layers": Array [
+          Object {
+            "Ref": "MyProjectDBSeederdevSeedLayer106D9E25",
+          },
+        ],
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "MyProjectDBSeederdevseederResourceRoleC51146EC",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs14.x",
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "MyProjectDBSeederdevseederCustomResource": Object {
+      "DeletionPolicy": "Delete",
+      "Properties": Object {
+        "ServiceToken": Object {
+          "Fn::GetAtt": Array [
+            "MyProjectDBSeederdevseederProviderframeworkonEventC1A298F9",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::CloudFormation::CustomResource",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "MyProjectDBSeederdevseederProviderframeworkonEventC1A298F9": Object {
+      "DependsOn": Array [
+        "MyProjectDBSeederdevseederProviderframeworkonEventServiceRoleDefaultPolicy729EB57C",
+        "MyProjectDBSeederdevseederProviderframeworkonEventServiceRole8C070508",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParametersc691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49cS3BucketEAC9DD43",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParametersc691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49cS3VersionKeyDD9AE9E7",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParametersc691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49cS3VersionKeyDD9AE9E7",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Description": "AWS CDK resource provider framework - onEvent (Default/seeder_stack/MyProjectDB-Seeder-dev_seederProvider)",
+        "Environment": Object {
+          "Variables": Object {
+            "USER_ON_EVENT_FUNCTION_ARN": Object {
+              "Fn::GetAtt": Array [
+                "MyProjectDBSeederdevdatadevseedHandler01709C6C",
+                "Arn",
+              ],
+            },
+          },
+        },
+        "Handler": "framework.onEvent",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "MyProjectDBSeederdevseederProviderframeworkonEventServiceRole8C070508",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs14.x",
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "MyProjectDBSeederdevseederProviderframeworkonEventLogRetention4AFFF7BA": Object {
+      "Properties": Object {
+        "LogGroupName": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "/aws/lambda/",
+              Object {
+                "Ref": "MyProjectDBSeederdevseederProviderframeworkonEventC1A298F9",
+              },
+            ],
+          ],
+        },
+        "RetentionInDays": 1,
+        "ServiceToken": Object {
+          "Fn::GetAtt": Array [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::LogRetention",
+    },
+    "MyProjectDBSeederdevseederProviderframeworkonEventServiceRole8C070508": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "MyProjectDBSeederdevseederProviderframeworkonEventServiceRoleDefaultPolicy729EB57C": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": Object {
+                "Fn::GetAtt": Array [
+                  "MyProjectDBSeederdevdatadevseedHandler01709C6C",
+                  "Arn",
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "MyProjectDBSeederdevseederProviderframeworkonEventServiceRoleDefaultPolicy729EB57C",
+        "Roles": Array [
+          Object {
+            "Ref": "MyProjectDBSeederdevseederProviderframeworkonEventServiceRole8C070508",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "MyProjectDBSeederdevseederResourceRoleC51146EC": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "MyProjectDBSeederdevseederResourceRoleDefaultPolicy7B61D9F1": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "dynamodb:GetItem",
+                "dynamodb:BatchGetItem",
+                "dynamodb:Query",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:updateTable",
+                "dynamodb:describeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            Object {
+              "Action": Array [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::Join": Array [
+                    "",
+                    Array [
+                      "arn:",
+                      Object {
+                        "Ref": "AWS::Partition",
+                      },
+                      ":dynamodb:",
+                      Object {
+                        "Ref": "AWS::Region",
+                      },
+                      ":",
+                      Object {
+                        "Ref": "AWS::AccountId",
+                      },
+                      ":table/data-dev",
+                    ],
+                  ],
+                },
+                Object {
+                  "Fn::Join": Array [
+                    "",
+                    Array [
+                      "arn:",
+                      Object {
+                        "Ref": "AWS::Partition",
+                      },
+                      ":dynamodb:",
+                      Object {
+                        "Ref": "AWS::Region",
+                      },
+                      ":",
+                      Object {
+                        "Ref": "AWS::AccountId",
+                      },
+                      ":table/data-dev/index/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "MyProjectDBSeederdevseederResourceRoleDefaultPolicy7B61D9F1",
+        "Roles": Array [
+          Object {
+            "Ref": "MyProjectDBSeederdevseederResourceRoleC51146EC",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+  },
+}
+`;

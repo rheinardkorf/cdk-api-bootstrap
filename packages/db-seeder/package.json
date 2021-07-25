@@ -7,7 +7,8 @@
     "bootstrap": "cdk bootstrap",
     "deploy": "yarn cdk deploy --require-approval never --outputs-file cdk.out.json",
     "destroy": "cdk destroy --force",
-    "synth": "cdk synth"
+    "synth": "cdk synth",
+    "test": "jest"
   },
   "dependencies": {
     "@aws-cdk/core": "^1.111.0",
