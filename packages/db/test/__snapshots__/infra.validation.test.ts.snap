@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`stack validation 1`] = `
+exports[`DB stack validation 1`] = `
 Object {
   "Resources": Object {
     "MyProjectDBdevDynamoDBFC24880B": Object {
