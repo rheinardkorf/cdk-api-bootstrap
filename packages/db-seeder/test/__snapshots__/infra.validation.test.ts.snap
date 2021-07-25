@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`stack validation 1`] = `
+exports[`DB Seeder stack validation 1`] = `
 Object {
   "Parameters": Object {
     "AssetParameters190e72aa1cf240afd7df504eeb8214dd94dbc2bec52d4e2cec73f367f0fbd48cArtifactHash0CC9DBB5": Object {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`stack validation 1`] = `
+exports[`API stack validation 1`] = `
 Object {
   "Outputs": Object {
     "MyProjectAPIdevAPIEndpointDBF83C6C": Object {

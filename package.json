@@ -2,6 +2,9 @@
   "name": "cdk-api-bootstrap",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "yarn workspaces run test"
+  },
   "workspaces": [
     "packages/*"
   ]
