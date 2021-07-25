@@ -3,7 +3,7 @@ import { Stack } from "@aws-cdk/core"
 
 import { SeederStack } from "../infra/stack"
 
-test("stack validation", () => {
+test("DB Seeder stack validation", () => {
     const stack = new Stack();
     const seeder_stack = new SeederStack(stack, 'seeder_stack');
     const received = SynthUtils.toCloudFormation(seeder_stack);
